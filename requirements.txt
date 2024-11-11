@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+torch
+python-multipart
+pyannote.audio==3.1
+python-magic
+insanely-fast-whisper==0.0.15
