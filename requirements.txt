@@ -1,8 +1,7 @@
 fastapi
 uvicorn[standard]
 python-dotenv
-torch
+transformers
 python-multipart
-pyannote.audio==3.1
+pyannote.audio==3.1.0
 python-magic
-insanely-fast-whisper==0.0.15
