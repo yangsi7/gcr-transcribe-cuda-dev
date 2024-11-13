@@ -65,7 +65,7 @@ gcloud beta run deploy audio-transcription-service \
     --gpu-type=nvidia-l4 \
     --max-instances=1 \
     --no-cpu-throttling \
-    --set-env-vars=HF_TOKEN=your_hugging_face_token,LD_LIBRARY_PATH=/usr/local/nvidia/lib64,TRANSCRIPTION_BATCH_SIZE=24,TRANSCRIPTION_MODEL_NAME=openai/whisper-tiny,TRANSCRIPTION_DIARIZATION_MODEL=pyannote/speaker-diarization-3.1 \
+    --set-env-vars=HF_TOKEN=your_hugging_face_token,LD_LIBRARY_PATH=/usr/local/nvidia/lib64,TRANSCRIPTIO N_BATCH_SIZE=24,TRANSCRIPTION_MODEL_NAME=openai/whisper-tiny,TRANSCRIPTION_DIARIZATION_MODEL=pyannote/speaker-diarization-3.1 \
     --port=8080
     ```
 
@@ -79,7 +79,7 @@ curl -X POST \
     -F 'file=@/Users/yangsim/Desktop/Archive/Bojack.mp3' \
     https://audio-transcription-service-1040094048579.us-central1.run.app/transcribe/
     ```
-    
+
 3. **Ensure necessary quotas and permissions**:
 
     - Request GPU quota in your region.
