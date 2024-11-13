@@ -18,6 +18,12 @@ RUN apt-get update && \
     pip3 install --no-cache-dir -r requirements.txt && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
+# Install insanely-fast-whisper with necessary flags
+RUN pip3 install insanely-fast-whisper==0.0.15 --ignore-requires-python
+
+# Pin numpy to a version compatible with pyannote.audio
+RUN pip3 install "numpy<2.0"
+
 # Copy the source code
 COPY src/ src/
 
